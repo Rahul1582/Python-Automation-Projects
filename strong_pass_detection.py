@@ -1,14 +1,14 @@
 import re
 
-p = False
-while p == False:
+passwordChanged = False
+while passwordChanged == False:
  	
-	print('Please type a strong pasword.')
+	print('Please type a strong pasword')
 	uInput = input()
 
 	
 	if len(uInput) < 8:
-		print ('A strong password has at least 8 characters')
+		print ('A strong password has at least 8 chracters')
 	else: 
 		pass
 	#check for a capital
@@ -16,7 +16,7 @@ while p == False:
 	mo = capitalRegex.findall(uInput)
 
 	if mo == []:
-		print('A strong password includes both capital and lowercase letters,Please add them.')
+		print('A strong password includes both capital and lowercase letters')
 		
 	else:
 		pass
@@ -27,10 +27,10 @@ while p == False:
 	mo = digitRegex.findall(uInput)
 	
 	if mo == []:
-		print('A strong password includes at least one number,Please add one numbeer.')
+		print('A strong password includes at least one number')
 		
 	else: 
-		p = True
+		passwordChanged = True
 
 password = uInput
 
