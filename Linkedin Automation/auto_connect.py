@@ -65,7 +65,7 @@ class Bot():
 
         
 
-        for i in range(2):
+        for i in range(10):
             send2.click()
             connect=send2.click().find_element_by_link_text("Send now")
             connect.click()    
