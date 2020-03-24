@@ -33,25 +33,43 @@ class Bot():
 
         #Searching for the people whom you want to send conections
 
-        name=input("Enter Category:")
+        name=input("Enter Category you want to search:")
 
         cat=self.driver.find_element_by_xpath('//*[@id="ember42"]/input')  
         cat.click()
-        cat.send_keys(name)
-
+        cat.send_keys(name+" in people")
+        sleep(2)
 
         send=self.driver.find_element_by_xpath('//*[@id="ember40"]/div[2]')
         send.click()
+        sleep(4)
 
-
-        people=self.driver.find_elements_by_css_selector('#ember6675 > ul > li:nth-child(1)')
-        people.click()
        
+            
+        # for i in range(2):
+        #     self.driver.execute_script("window.scrollBy(0,200)","")
+        #     sleep(3)
+
+        for i in range(2):
+            send1=self.driver.find_element_by_link_text('Connect')
+            sleep(4)
+
+            send1.click()
         
+       
+       
+        # while(True):
+        #      connect=self.driver.find_element_by_link_text("Connect")
+        #      counter=0
+        #      cb_length=3
 
+        #      while(counter<cb_length):
+        #          connect[counter].click()
+                
+        #          counter+=1
+       
 
-
-
+        
 
 bot=Bot()
 bot.main()
