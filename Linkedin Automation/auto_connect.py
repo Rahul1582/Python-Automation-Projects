@@ -50,14 +50,34 @@ class Bot():
         #     self.driver.execute_script("window.scrollBy(0,200)","")
         #     sleep(3)
 
-        for i in range(2):
-            send1=self.driver.find_element_by_link_text('Connect')
-            sleep(4)
+        # for i in range(2):
+        #     send1=self.driver.find_element_by_link_text('Connect')
+        #     sleep(4)
 
-            send1.click()
+        #     send1.click()
         
-       
-       
+        send1=self.driver.find_element_by_class_name('search-results__list')
+
+        send2=send1.find_element_by_tag_name('button')
+        
+        sleep(4)
+
+
+        
+
+        for i in range(2):
+            send2.click()
+            connect=send2.click().find_element_by_link_text("Send now")
+            connect.click()    
+
+         
+        # t=0 
+        # while(t<3): 
+        #    for i in send1:
+        #        x=i.text
+        #        print(x)
+        #        t+=1
+
         # while(True):
         #      connect=self.driver.find_element_by_link_text("Connect")
         #      counter=0
